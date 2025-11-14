@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 
 export function Navigation() {
   return (
-    <nav className="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-slate-200">
+    <nav className="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">

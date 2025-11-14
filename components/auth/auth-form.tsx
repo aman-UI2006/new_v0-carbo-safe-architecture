@@ -16,13 +16,6 @@ export function AuthForm({ role, roleTitle, roleColor }: AuthFormProps) {
   const [formData, setFormData] = useState({ email: '', password: '', confirmPassword: '' })
   const [loading, setLoading] = useState(false)
 
-  const gradientStyles: Record<string, string> = {
-    'from-green-400 to-emerald-600': 'linear-gradient(135deg, rgb(74, 222, 128) 0%, rgb(5, 150, 105) 100%)',
-    'from-blue-400 to-blue-600': 'linear-gradient(135deg, rgb(96, 165, 250) 0%, rgb(37, 99, 235) 100%)',
-    'from-amber-400 to-orange-600': 'linear-gradient(135deg, rgb(251, 191, 36) 0%, rgb(217, 119, 6) 100%)',
-    'from-purple-400 to-indigo-600': 'linear-gradient(135deg, rgb(192, 132, 250) 0%, rgb(79, 70, 229) 100%)',
-  }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -32,8 +25,10 @@ export function AuthForm({ role, roleTitle, roleColor }: AuthFormProps) {
     e.preventDefault()
     setLoading(true)
     
+    // Simulate auth - in production, call your auth API
     setTimeout(() => {
       setLoading(false)
+      // Redirect to dashboard based on role
       window.location.href = `/dashboard/${role}`
     }, 1500)
   }
@@ -53,16 +48,13 @@ export function AuthForm({ role, roleTitle, roleColor }: AuthFormProps) {
           <p className="text-foreground/60 mb-4">
             {isLogin ? 'Sign in to your' : 'Create your'} {roleTitle} account
           </p>
-          <div 
-            className="inline-block px-4 py-2 rounded-lg text-white text-sm font-semibold"
-            style={{ background: gradientStyles[roleColor] || gradientStyles['from-green-400 to-emerald-600'] }}
-          >
+          <div className={`inline-block px-4 py-2 rounded-lg bg-gradient-to-r ${roleColor} text-white text-sm font-semibold`}>
             {roleTitle}
           </div>
         </div>
 
         {/* Form Card */}
-        <Card className="border-slate-200/50 shadow-lg">
+        <Card className="border-border/50 shadow-lg">
           <CardHeader>
             <CardTitle>
               {isLogin ? 'Sign In' : 'Create Account'}
@@ -90,7 +82,7 @@ export function AuthForm({ role, roleTitle, roleColor }: AuthFormProps) {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 bg-background text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition"
+                    className="w-full pl-10 pr-4 py-2 rounded-lg border border-border bg-background text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition"
                   />
                 </div>
               </div>
@@ -109,7 +101,7 @@ export function AuthForm({ role, roleTitle, roleColor }: AuthFormProps) {
                     value={formData.password}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 bg-background text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition"
+                    className="w-full pl-10 pr-4 py-2 rounded-lg border border-border bg-background text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition"
                   />
                 </div>
               </div>
@@ -129,7 +121,7 @@ export function AuthForm({ role, roleTitle, roleColor }: AuthFormProps) {
                       value={formData.confirmPassword}
                       onChange={handleChange}
                       required
-                      className="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 bg-background text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition"
+                      className="w-full pl-10 pr-4 py-2 rounded-lg border border-border bg-background text-foreground placeholder-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition"
                     />
                   </div>
                   {formData.password && formData.confirmPassword && formData.password !== formData.confirmPassword && (

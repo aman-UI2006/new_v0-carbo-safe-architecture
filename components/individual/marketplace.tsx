@@ -15,7 +15,7 @@ const projects = [
     impact: '500 tons CO₂/year',
     price: '$12.50/ton',
     verification: 95,
-    image: '/amazon-rainforest-trees.jpg',
+    image: 'url("/amazon-rainforest-trees.jpg")',
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const projects = [
     impact: '1000 tons CO₂/year',
     price: '$8.00/ton',
     verification: 98,
-    image: '/solar-panels-farm.jpg',
+    image: 'url("/solar-panels-farm.jpg")',
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const projects = [
     impact: '300 tons CO₂/year',
     price: '$15.00/ton',
     verification: 92,
-    image: '/ocean-cleanup-effort.png',
+    image: 'url("/ocean-cleanup.jpg")',
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const projects = [
     impact: '800 tons CO₂/year',
     price: '$9.50/ton',
     verification: 96,
-    image: '/wind-turbines-field.png',
+    image: 'url("/wind-turbines.jpg")',
   },
 ]
 
@@ -101,7 +101,7 @@ export function Marketplace() {
               <div className="relative h-40 bg-muted overflow-hidden group-hover:shadow-inner">
                 <motion.div
                   className="w-full h-full bg-cover bg-center group-hover:scale-125 transition-transform duration-500"
-                  style={{ backgroundImage: `url(${project.image})` }}
+                  style={{ backgroundImage: project.image }}
                 />
                 <motion.div 
                   initial={{ opacity: 0 }}

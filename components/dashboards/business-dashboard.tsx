@@ -139,7 +139,7 @@ export function BusinessDashboard() {
             <h3 className="text-xl font-bold text-foreground mb-4">Available Projects</h3>
             <div className="space-y-3">
               {['Solar Farm (India)', 'Reforestation (Brazil)', 'Wind Energy (Kenya)'].map((project, idx) => (
-                <div key={idx} className="p-3 border border-slate-200 rounded-lg hover:border-accent/50 transition flex items-center justify-between">
+                <div key={idx} className="p-3 border border-border rounded-lg hover:border-accent/50 transition flex items-center justify-between">
                   <span className="text-foreground text-sm">{project}</span>
                   <Button size="sm" className="bg-accent">Buy</Button>
                 </div>

@@ -62,7 +62,7 @@ export function Payments() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setPaymentMethod(method.id)}
                   className={`p-4 border-2 rounded-lg transition-all relative overflow-hidden group ${
-                    paymentMethod === method.id ? 'border-primary bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg' : 'border-slate-200 hover:border-primary/50 hover:shadow-md'
+                    paymentMethod === method.id ? 'border-primary bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg' : 'border-border hover:border-primary/50 hover:shadow-md'
                   }`}
                 >
                   <div className={`absolute inset-0 bg-gradient-eco opacity-0 group-hover:opacity-5 transition-opacity`} />

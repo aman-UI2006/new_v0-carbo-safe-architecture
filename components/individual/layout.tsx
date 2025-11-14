@@ -35,7 +35,7 @@ export function IndividualLayout({
         initial={{ x: -300 }}
         animate={{ x: sidebarOpen || true ? 0 : -300 }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className="fixed left-0 top-0 bottom-0 w-64 bg-white/80 backdrop-blur-xl border-r border-slate-200 shadow-xl z-40 md:translate-x-0"
+        className="fixed left-0 top-0 bottom-0 w-64 bg-white/80 backdrop-blur-xl border-r border-border shadow-xl z-40 md:translate-x-0"
       >
         <div className="p-6">
           {/* Logo */}
@@ -71,7 +71,7 @@ export function IndividualLayout({
           </nav>
 
           {/* Logout */}
-          <div className="border-t border-slate-200 mt-8 pt-6">
+          <div className="border-t border-border mt-8 pt-6">
             <Link href="/">
               <Button variant="outline" className="w-full gap-2">
                 <LogOut className="w-4 h-4" />
@@ -85,7 +85,7 @@ export function IndividualLayout({
       {/* Main Content */}
       <div className="md:ml-64">
         {/* Mobile Header */}
-        <div className="md:hidden sticky top-0 z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 p-4 flex items-center justify-between">
+        <div className="md:hidden sticky top-0 z-30 bg-white/80 backdrop-blur-xl border-b border-border p-4 flex items-center justify-between">
           <div className="font-bold text-lg bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             CarboSafe
           </div>

@@ -59,7 +59,7 @@ export function RoleSelection() {
           const Icon = role.icon
           return (
             <Link key={role.id} href={role.href}>
-              <div className="group h-full p-8 rounded-xl border border-slate-200 bg-card hover:border-accent/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
+              <div className="group h-full p-8 rounded-xl border border-border bg-card hover:border-accent/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
                 <div className={`mb-6 p-4 w-fit bg-gradient-to-br ${role.color} rounded-lg`}>
                   <Icon className="w-8 h-8 text-white" />
                 </div>

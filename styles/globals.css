@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: oklch(1 0 0);
@@ -71,7 +74,7 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-@theme {
+@theme inline {
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
@@ -113,9 +116,8 @@
 }
 
 @layer base {
-  /* Remove invalid border-border directive - use border-border-color instead */
   * {
-    @apply ring-transparent;
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;

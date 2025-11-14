@@ -51,7 +51,7 @@ export function Profile() {
                     type={field.type || 'text'}
                     defaultValue={field.defaultValue}
                     onChange={() => setChanged(true)}
-                    className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-input focus:outline-none focus:ring-2 focus:ring-primary transition-all hover:border-primary/50"
+                    className="w-full px-4 py-2 rounded-lg border border-border bg-input focus:outline-none focus:ring-2 focus:ring-primary transition-all hover:border-primary/50"
                   />
                 </motion.div>
               )

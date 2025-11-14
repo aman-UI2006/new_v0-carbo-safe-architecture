@@ -155,7 +155,7 @@ export function CarbonCalculator() {
                     className={`p-4 rounded-xl border-2 transition-all ${
                       answers[currentStep.id] === option.value
                         ? 'border-primary bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg scale-105'
-                        : 'border-slate-200 bg-muted/50 hover:border-primary/50 hover:shadow-md'
+                        : 'border-border bg-muted/50 hover:border-primary/50 hover:shadow-md'
                     }`}
                   >
                     <div className="text-3xl mb-2">{option.emoji}</div>

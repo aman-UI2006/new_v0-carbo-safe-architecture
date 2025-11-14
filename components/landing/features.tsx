@@ -37,7 +37,7 @@ export function Features() {
             return (
               <div
                 key={idx}
-                className="group p-8 rounded-xl border border-slate-200 bg-card hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="group p-8 rounded-xl border border-border bg-card hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="mb-4 p-3 w-fit bg-accent/10 rounded-lg group-hover:bg-accent/20 transition">
                   <Icon className="w-6 h-6 text-accent" />

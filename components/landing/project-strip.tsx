@@ -27,7 +27,7 @@ export function ProjectStrip() {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-lg border border-slate-200 bg-card hover:border-accent/50 hover:shadow-md transition-all cursor-pointer group"
+              className="p-6 rounded-lg border border-border bg-card hover:border-accent/50 hover:shadow-md transition-all cursor-pointer group"
             >
               <div className="h-40 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 group-hover:from-primary/30 group-hover:to-accent/30 transition" />
               <h3 className="font-semibold text-foreground mb-2">{project.name}</h3>

@@ -147,7 +147,7 @@ export function IndividualDashboard() {
             <h3 className="text-xl font-bold text-foreground mb-6">Active Challenges</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {['Walk Instead', 'No Plastic Day', 'Save Energy'].map((challenge, idx) => (
-                <div key={idx} className="p-4 border border-slate-200 rounded-lg hover:border-accent/50 transition">
+                <div key={idx} className="p-4 border border-border rounded-lg hover:border-accent/50 transition">
                   <p className="font-semibold text-foreground mb-2">{challenge}</p>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-accent">+50 XP</span>
